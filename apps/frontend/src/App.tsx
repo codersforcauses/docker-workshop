@@ -4,7 +4,6 @@ import { Input } from "./components/ui/input";
 import DataTable from "./components/orders/data-table";
 import { columns } from "./components/orders/columns";
 import { Order } from "./lib/types";
-import { Label } from "./components/ui/label";
 
 const getOrders = async () => {
   const response = await fetch("/api/orders");
