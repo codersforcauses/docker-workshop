@@ -48,7 +48,7 @@ function App() {
   return (
     <div className="container py-6">
       <header className="text-4xl font-semibold text-center my-4">
-        Docker Coffee Shop 🐳
+        Welcome to Coders for Coffee 🐳
       </header>
       <main className="space-y-4">
         <form className="flex gap-2" onSubmit={handleOrder}>

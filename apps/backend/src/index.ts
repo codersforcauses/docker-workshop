@@ -18,7 +18,7 @@ const orders = [
 ];
 
 app.get("/", (c) => {
-  return c.text("Hello Hono!");
+  return c.text("Hello there!");
 });
 
 app.get("/ping", (c) => {
@@ -43,3 +43,5 @@ serve({
   fetch: app.fetch,
   port,
 });
+
+export default app;
