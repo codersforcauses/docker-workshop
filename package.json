@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "setup": "npm install --prefix apps/frontend -g && npm install --prefix apps/backend -g && npm install",
     "dev:frontend": "cd apps/frontend && npm run dev",
     "dev:backend": "cd apps/backend && npm run dev",
     "dev": "concurrently --kill-others \"npm run dev:frontend\" \"npm run dev:backend\""

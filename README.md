@@ -1,4 +1,4 @@
-# docker-workshop-template
+# docker-workshop
 
 What you'll need:
 
@@ -10,7 +10,7 @@ What you'll need:
 To see the completed application, run the following commands, then navigate to `http://localhost:3000` in your browser.
 
 ```bash
-npm install
+npm run setup
 npm run dev
 ```
 
