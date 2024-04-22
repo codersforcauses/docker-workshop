@@ -1,0 +1,19 @@
+{
+  "name": "docker-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "./apps/frontend",
+    "./apps/backend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "author": "dct0",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
