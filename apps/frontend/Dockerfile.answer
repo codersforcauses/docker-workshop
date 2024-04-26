@@ -1,0 +1,25 @@
+# Stage 0: Define a common image for building and running
+FROM node:20-alpine AS base
+
+
+# Stage 1: Build the app
+FROM base AS builder
+WORKDIR /app
+
+COPY . ./
+
+RUN npm install && npm run build && npm prune --production
+
+# Stage 2: Serve the build files
+FROM base AS runner
+WORKDIR /app
+
+# Copy dependencies
+COPY --from=builder /app/node_modules ./node_modules
+# Copy built files
+COPY --from=builder /app/dist ./dist
+# Copy package.json so we can run `npm run preview`
+COPY --from=builder /app/package.json ./package.json
+
+EXPOSE 9876
+CMD ["npm", "run", "start"]
