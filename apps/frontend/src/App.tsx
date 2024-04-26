@@ -69,6 +69,9 @@ function App() {
         </form>
         <DataTable className="w-full" columns={columns} data={orders} />
       </main>
+      <footer className="text-center mt-6">
+        You are in <strong>{process.env.NODE_ENV}</strong> mode.
+      </footer>
     </div>
   );
 }

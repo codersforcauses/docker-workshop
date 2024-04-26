@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  frontend:
+    image: docker-workshop-frontend
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:9876"
+    depends_on:
+      - backend
+
+  backend:
+    image: docker-workshop-backend
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
